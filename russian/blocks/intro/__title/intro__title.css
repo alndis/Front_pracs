@@ -1,0 +1,34 @@
+.intro__title {
+  margin: 0;
+  padding: 64px 16px 0;
+  font-family: "Inter", "Arial", "Helvetica", sans-serif;
+  font-size: 32px;
+  font-weight: 900;
+  line-height: 1.1;
+  text-align: left;
+  color: white;
+}
+
+@media screen and (min-width: 768px) {
+  .intro__title {
+    width: 720px;
+    padding-top: 88px;
+    padding-bottom: 0;
+    padding-left: 24px;
+    padding-right: 0;
+    font-size: 54px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .intro__title {
+    padding-top: 92px;
+    padding-left: 48px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .intro__title {
+    padding-left: 148px;
+  }
+}

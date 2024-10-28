@@ -1,0 +1,22 @@
+.main__photo-grid {
+  padding-top: 64px;
+  padding-bottom: 0;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+@media screen and (min-width: 768px) {
+  .main__photo-grid {
+    padding-top: 88px;
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .main__photo-grid {
+    padding-top: 92px;
+    padding-left: 48px;
+    padding-right: 48px;
+  }
+}

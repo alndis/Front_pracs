@@ -1,0 +1,15 @@
+.places__website {
+  grid-area: website;
+  margin: 0;
+  padding: 0 16px 0;
+}
+
+@media screen and (min-width: 768px) {
+  .places__website {
+    padding-top: 32px;
+    padding-bottom: 0;
+    padding-left: 0;
+    padding-right: 28px;
+    align-self: end;
+  }
+}

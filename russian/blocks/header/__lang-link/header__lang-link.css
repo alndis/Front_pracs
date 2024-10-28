@@ -1,0 +1,25 @@
+.header__lang-link {
+  padding: 0;
+  margin: 0;
+  margin-left: 18px;
+  font-family: "Inter", "Arial", "Helvetica", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.1;
+  color: white;
+  background-color: #2a2c2f;
+  border: 0;
+  text-decoration: none;
+}
+
+.header__lang-link:hover {
+  opacity: 80%;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 768px) {
+  .header__lang-link {
+    font-size: 24px;
+    line-height: 1.17;
+  }
+}

@@ -1,0 +1,38 @@
+.intro__list {
+  margin: 0;
+  padding-top: 34px;
+  padding-bottom: 0;
+  padding-left: 16px;
+  padding-right: 16px;
+  list-style: none;
+  font-size: 12px;
+  line-height: 1.5;
+  font-weight: 700;
+  color: white;
+  font-family: "Inter", "Arial", "Helvetica", sans-serif;
+}
+
+@media screen and (min-width: 768px) {
+  .intro__list {
+    padding-top: 37px;
+    padding-left: 24px;
+    padding-right: 24px;
+    width: 720px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .intro__list {
+    padding-top: 33px;
+    padding-left: 48px;
+    padding-right: 48px;
+    width: 690px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .intro__list {
+    padding-left: 148px;
+    padding-right: 0;
+  }
+}

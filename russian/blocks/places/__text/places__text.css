@@ -1,0 +1,4 @@
+.places__text {
+  grid-area: text;
+  align-self: start;
+}
