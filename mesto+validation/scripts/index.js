@@ -259,3 +259,8 @@ for (let i = 0; i < popupsList.length; i++){
     evt.target.classList.remove("popup_is-opened");
   });
 }
+document.addEventListener('keydown', function(evt){
+  for (let i = 0; i < popupsList.length; i++){
+    popupsList[i].classList.remove("popup_is-opened");
+  }
+});
