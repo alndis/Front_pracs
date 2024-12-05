@@ -142,14 +142,15 @@ const cardNameInputInvalid = document.querySelector('.title__input_invalid');
 const cardUrlInputInvalid = document.querySelector('.url__input_invalid');
 newCardPopupTitleInput.addEventListener('input', function(evt){ //Валидация названия
     if (!evt.target.validity.valid){
+        // console.log(evt.target.validity);
         evt.target.classList.add("popup__input-invalid"); //изменение цвета границы
-        cardAddButton.classList.add("popup__close-invalid"); //изменение прозрачности кнопки
+        cardAddButton.classList.add("popup__button_inactive"); //изменение прозрачности кнопки
         cardAddButton.disabled = true;
     }
     else{
         evt.target.classList.remove("popup__input-invalid");
         if (newCardPopupUrlInput.validity.valid){
-            cardAddButton.classList.remove("popup__close-invalid");
+            cardAddButton.classList.remove("popup__button_inactive");
             cardAddButton.disabled = false;
         }
     }
@@ -169,13 +170,13 @@ newCardPopupTitleInput.addEventListener('input', function(evt){ //Валидац
 newCardPopupUrlInput.addEventListener("input", function(evt){ //Валидация ссылки
     if (!evt.target.validity.valid){
         evt.target.classList.add("popup__input-invalid");
-        cardAddButton.classList.add("popup__close-invalid");
+        cardAddButton.classList.add("popup__button_inactive");
         cardAddButton.disabled = true;
     }
     else{
         evt.target.classList.remove("popup__input-invalid");
         if (newCardPopupTitleInput.validity.valid){
-            cardAddButton.classList.remove("popup__close-invalid");
+            cardAddButton.classList.remove("popup__button_inactive");
             cardAddButton.disabled = false;
         }
     }
@@ -201,13 +202,13 @@ const profileDescriptionInputInvalid = document.querySelector('.description__inp
 profilePopupTitleInput.addEventListener("input", function(evt){
     if (!evt.target.validity.valid){
         evt.target.classList.add("popup__input-invalid"); //изменение цвета границы
-        profileSaveButton.classList.add("popup__close-invalid"); //изменение прозрачности кнопки
+        profileSaveButton.classList.add("popup__button_inactive"); //изменение прозрачности кнопки
         profileSaveButton.disabled = true;
     }
     else{
         evt.target.classList.remove("popup__input-invalid");
         if (profilePopupDescriptionInput.validity.valid){
-            profileSaveButton.classList.remove("popup__close-invalid");
+            profileSaveButton.classList.remove("popup__button_inactive");
             profileSaveButton.disabled = false;
         }
     }
@@ -226,13 +227,13 @@ profilePopupTitleInput.addEventListener("input", function(evt){
 profilePopupDescriptionInput.addEventListener("input", function(evt){
     if (!evt.target.validity.valid){
         evt.target.classList.add("popup__input-invalid"); //изменение цвета границы
-        profileSaveButton.classList.add("popup__close-invalid"); //изменение прозрачности кнопки
+        profileSaveButton.classList.add("popup__button_inactive"); //изменение прозрачности кнопки
         profileSaveButton.disabled = true;
     }
     else{
         evt.target.classList.remove("popup__input-invalid");
         if (profilePopupTitleInput.validity.valid){
-            profileSaveButton.classList.remove("popup__close-invalid");
+            profileSaveButton.classList.remove("popup__button_inactive");
             profileSaveButton.disabled = false;
         }
     }
@@ -252,11 +253,6 @@ profilePopupDescriptionInput.addEventListener("input", function(evt){
 const popupsList = document.querySelectorAll(".popup");
 
 for (let i = 0; i < popupsList.length; i++){
-    popupsList[i].addEventListener("keydown", function(evt){
-        if (evt.key === "Escape"){
-            popupsList[i].classList.remove("popup_is-opened");
-        }
-    });
     popupsList[i].addEventListener("click", function(evt){
         evt.target.classList.remove("popup_is-opened");
     });
