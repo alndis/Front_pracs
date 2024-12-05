@@ -6,15 +6,14 @@
         content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Mesto</title>
-  <link rel="stylesheet" href="./pages/index.css">
 </head>
 <div class="page__content">
   <header class="header page__section">
-    <img src="./images/logo.svg" alt="Логотип проекта масто" class="logo header__logo">
+    <img src="<%=require('./images/logo.svg')%>" alt="Логотип проекта масто" class="logo header__logo">
   </header>
   <main class="content">
     <section class="profile page__section">
-      <div class="profile__image" style="background-image: url('./images/avatar.jpg');"></div>
+      <div class="profile__image" style="background-image: url(<%=require('./images/avatar.jpg')%>);"></div>
       <div class="profile__info">
         <h1 class="profile__title">Жак-Ив Кусто</h1>
         <button class="profile__edit-button" type="button"></button>
@@ -29,7 +28,7 @@
   </main>
   <footer class="footer page__section">
     <p class="footer__copyright">
-      © 2021 Mesto Russia
+      © 2024 Mesto Russia
     </p>
   </footer>
   <div class="popup popup_type_edit">
@@ -37,11 +36,11 @@
       <button type="button" class="popup__close"></button>
       <h3 class="popup__title">Редактировать профиль</h3>
       <form class="popup__form" name="edit-profile">
-        <input type="text" name="name" class="popup__input popup__input_type_name" placeholder="Имя" 
-        required minlength="2" maxlength="40">
+        <input type="text" name="name" class="popup__input popup__input_type_name" placeholder="Имя"
+               required minlength="2" maxlength="40">
         <div class="name__input_invalid"></div>
         <input type="text" name="description" class="popup__input popup__input_type_description" placeholder="Занятие" required
-        minlength="2" maxlength="200">
+               minlength="2" maxlength="200">
         <div class="description__input_invalid"></div>
         <button type="submit" class="button popup__button">Сохранить</button>
       </form>
@@ -68,8 +67,7 @@
     </div>
   </div>
 </div>
-<script src="./scripts/cards.js"></script>
-<script src="./scripts/index.js" defer></script>
+
 
 <template id="template">
   <li class="places__item card">
